@@ -8,7 +8,8 @@ import {
   Button,
   Image,
   ToolbarAndroid,
-  TouchableOpacity
+  TouchableOpacity,
+  Platform
 } from 'react-native';
 import { DrawerActions } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -95,8 +96,8 @@ export default class dashboardComponent extends Component{
 const styles = StyleSheet.create({
     header:{
         flexDirection: 'row',
-        height: 50,
-        padding: 10,
+        height: Platform.OS === 'ios' ? 50 : 50,
+        padding: Platform.OS === 'ios' ? 12: 10,
         backgroundColor:'#696923',
     },
     menu:{
@@ -112,7 +113,7 @@ const styles = StyleSheet.create({
     modulesfirstrow:{
         flex: 1, flexDirection: 'row',
         marginTop:20,
-        marginLeft:20
+        marginLeft:Platform.OS === 'ios' ? 2 : 20
     },
     diary:{
         width: 120, height: 120, backgroundColor: 'orange'
@@ -125,8 +126,8 @@ const styles = StyleSheet.create({
     },
     modulessecondrow:{
         flex: 1, flexDirection: 'row',
-        marginTop:130,
-         marginLeft:20
+        marginTop:125,
+        marginLeft:Platform.OS === 'ios' ? 2 : 20
     },
     test:{
         width: 120, height: 120, backgroundColor: 'violet',
