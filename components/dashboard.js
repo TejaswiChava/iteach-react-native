@@ -9,7 +9,8 @@ import {
   Image,
   ToolbarAndroid,
   TouchableOpacity,
-  Platform
+  Platform,
+  SafeAreaView
 } from 'react-native';
 import { DrawerActions } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -42,6 +43,7 @@ export default class dashboardComponent extends Component{
     }
     render(){
         return(
+            <SafeAreaView>
             <View>
                 <View style={styles.header}>
                     <TouchableOpacity  onPress={()=> {
@@ -88,7 +90,7 @@ export default class dashboardComponent extends Component{
                 </View>
                
             </View>
-          
+          </SafeAreaView>
         )
     }
 

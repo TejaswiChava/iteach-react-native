@@ -5,7 +5,8 @@ import {
   View,
   ListView,
   TextInput,
-  Button
+  Button,
+  SafeAreaView
 } from 'react-native';
 import GenerateForm from 'react-native-form-builder';
 

@@ -16,9 +16,11 @@ import {
   ListView,
   TextInput,
   Button,
-  Image
+  Image,
+  SafeAreaView
 } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+YellowBox.ignoreWarnings(['Class RCTCxxModule']);
 let FriendsNavigator = createDrawerNavigator({
   Dashboard:{screen:dashboard},
   Diary:{screen:diary},
