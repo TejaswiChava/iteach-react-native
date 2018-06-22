@@ -9,6 +9,7 @@ import {
   Image
 } from 'react-native';
 import {Icon} from 'react-native-vector-icons';
+import { Divider } from 'react-native-elements';
 export default class timetableComponent extends Component{
     
     
