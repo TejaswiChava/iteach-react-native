@@ -110,9 +110,9 @@ const styles = StyleSheet.create({
         width: 100, height: 100,borderRadius:0,
         borderWidth: 0.5,
         borderColor: 'black',
-        marginTop:10,
-        marginLeft:Platform.OS === 'ios' ? 2 : 10,
-        marginBottom:10,
+        marginTop:Platform.OS === 'ios' ? 15 :10,
+        marginLeft:Platform.OS === 'ios' ? 5 : 10,
+        marginBottom:Platform.OS === 'ios' ? 10: 10,
         justifyContent: 'center'
     },
     textname:{
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         fontSize:30 ,
         // fontWeight:'bold'
         textAlign:'center',
-        marginTop:30,
+        // marginTop:30,
     },
     fulltestname:{
         fontSize: 22, textAlign: 'center', color: 'black',
