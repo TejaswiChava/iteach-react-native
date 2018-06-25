@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
         height: Platform.OS === 'ios' ? 50 : 50,
         padding: Platform.OS === 'ios' ? 12: 10,
         backgroundColor:'#696923',
+        marginTop:Platform.OS === 'ios' ? 10:0
     },
     menu:{
         color:'white',
