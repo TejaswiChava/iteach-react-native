@@ -16,16 +16,22 @@ import { DrawerActions } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Divider } from 'react-native-elements';
 export default class dashboardComponent extends Component{
+    static navigationOptions = { header: null }
     constructor() {
         super();
     
         // need to bind `this` to access props in handler
         this.openBar = this.openBar.bind(this);
+        this.createTest = this.createTest.bind(this);
       }
     openBar(){
         const { navigate } = this.props.navigation;
         console.log("click")
         this.props.navigation.dispatch(DrawerActions.openDrawer())
+    }
+    createTest(){
+        console.log("click")
+        this.props.navigation.navigate('CreateTest')
     }
    
     render(){
@@ -80,7 +86,9 @@ export default class dashboardComponent extends Component{
                     </View>
                 </View>
                 <View>
-                    <Icon style={styles.plusicon}  name="plus-circle" size={50} color="#696923"/>
+                    <TouchableOpacity  onPress={()=> {this.createTest()}}>
+                        <Icon style={styles.plusicon}  name="plus-circle" size={50} color="#696923"/>
+                    </TouchableOpacity>
                 </View>
             </View>
           </SafeAreaView>
